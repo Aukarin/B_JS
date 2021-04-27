@@ -10,6 +10,7 @@ const bucketListItemRoutes = require('./routes/api/bucketListItems')
 const userListItemRoutes = require('./routes/api/users')
 const buyListItemRoutes = require('./routes/api/buys')
 const staListItemRoutes = require('./routes/api/statuss')
+const sellListItemRoutes = require('./routes/api/historys')
 
 const methodOverride = require('method-override');
 
@@ -41,6 +42,7 @@ app.use('/api/bucketListItems', bucketListItemRoutes)
 app.use('/api/users', userListItemRoutes)
 app.use('/api/buys', buyListItemRoutes)
 app.use('/api/statuss', staListItemRoutes)
+app.use('/api/historys', sellListItemRoutes)
 
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static('client'))
